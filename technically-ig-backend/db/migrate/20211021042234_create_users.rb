@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :username 
       t.string :email
       t.integer :followers
-      t.integer :following
+      t.integer :followingrak
 
       t.timestamps
     end
