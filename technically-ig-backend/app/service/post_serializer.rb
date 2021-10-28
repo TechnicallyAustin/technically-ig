@@ -1,8 +1,6 @@
 class PostSerializer
     include FastJsonapi::ObjectSerializer
-    has_many :likes
-    has_many :comments
-    attributes :url, :caption
+    attributes :url, :caption, :likes 
 
     def initialize(post_object)
         @post = post_object
