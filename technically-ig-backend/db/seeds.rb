@@ -17,32 +17,32 @@ post = Post.create( [{ url: 'https://qph.fs.quoracdn.net/main-qimg-2563faf65a7db
 Post.destroy_all
 
 Post.create!([{
-    url: 'https://qph.fs.quoracdn.net/main-qimg-2563faf65a7db853eb03421976d6091f-lq',
+    url: '/Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture1.jpg',
     caption: 'First Post!',
     likes: 17
 },
 {
-    url: 'https://photos.app.goo.gl/1zQY28LdinY7eQ616',
+    url: '/Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture2.jpg',
     caption: 'Second Post!',
     likes: 133
 },
 {
-    url: 'https://photos.app.goo.gl/HDrQo5hbk7mTF6zt7',
+    url:'/Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture4.jpg' ,
     caption: 'Third Post!',
     likes: 170
 },
 {
-    url: 'https://photos.app.goo.gl/LaWKFR3WbqmYFd658',
+    url: '/Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture5.jpeg',
     caption: 'Fourth Post!',
     likes: 10
 },
 {
-    url: 'https://photos.app.goo.gl/2cRfhXJrq3uVYaNN7',
+    url: '/Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture6.jpeg',
     caption: 'Fifth Post!',
     likes: 66,
 },
 {
-    url: 'https://photos.app.goo.gl/JVS6n1s59fRw4wuX8',
+    url: '/Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture7.jpeg',
     caption: 'Sixth Post!',
     likes: 66
 }
