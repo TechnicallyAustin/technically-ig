@@ -13,6 +13,7 @@ let profileName;
 let addImage;
 let actionLinks;
 let newLikesDiv;
+let formatter;
 
 /* Provides the JSON data from Rails Post Objects */
 function fetchPosts() {
@@ -27,7 +28,28 @@ function createPosts() {
     newPostUl = document.body.appendChild(document.createElement('ul-posts'))
 
     allPosts.forEach(post => {
-        postBuilder()
+        console.log(post['url'])
+        let divCard = document.body.appendChild(document.createElement('div.card'))
+        divCard.style = 'width: 18rme;'
+
+        let divImage = divCard.appendChild(document.createElement('img'))
+        divImage.className = 'card-img-top'
+        divImage.src = post['url']
+        divImage.alt = post['caption']
+        divImage.width = '150'
+        divImage.height = '300'
+
+        let imgCaption = divImage.appendChild(document.createElement('p.card-text'))
+        imgCaption.innerHTML = post['caption']
+    })
+}
+
+
+
+
+    /*
+        //postBuilder()
+        cardFormat()
         // Profile Div 
         profileName.innerText = "Profile Name"
 
@@ -42,7 +64,8 @@ function createPosts() {
         // Likes Div
         newLikesDiv.innerText = `${post['likes']} likes`
     })
-}
+    
+} */
 
 function postBuilder() {
     // Post List items
@@ -67,3 +90,23 @@ function postBuilder() {
     // Likes Div
     newLikesDiv = actionController.appendChild(document.createElement('p'));
 }
+
+
+function cardFormat() {
+    // using Jquery write a method to perform the following
+    //Create <div class="card" style ="width: 18rem;">
+    let divCard = document.body.appendChild(document.createElement('div.card'))
+    divCard.style = 'width: 18rme;'
+    // Create  <img src="post["url"] class="card-img-top" alt="post["caption"]>
+    let divImage = divCard.appendChild(document.createElement('img.card-img-top'))
+    divImage.src = post['url']
+    divImage.alt = post['caption']
+    divImage.width = '300'
+    divImage.height = '200'
+    //create <p class="card-text"> post["caption"]</p>
+    let imgCaption = divImage.appendChild(document.createElement('p.card-text'))
+    imgCaption.innerHTML = post['caption']
+}
+
+
+ ///Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture1.jpg
