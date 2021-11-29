@@ -24,48 +24,47 @@ function fetchPosts() {
         })
 }
 
+// Using the Provided JSON data from fetchPosts(), This function uses Jquery to structure the JSON data on the Page.
 function createPosts() {
     newPostUl = document.body.appendChild(document.createElement('ul-posts'))
 
+    // Iterates over each Post Model created in Rails. Creates a Div card to house the post info
     allPosts.forEach(post => {
         console.log(post['url'])
         let divCard = document.body.appendChild(document.createElement('div.card'))
         divCard.style = 'width: 18rme;'
 
+        // Formats Picture and Assigns attributes to the img object
         let divImage = divCard.appendChild(document.createElement('img'))
         divImage.className = 'card-img-top'
         divImage.src = post['url']
         divImage.alt = post['caption']
-        divImage.width = '150'
-        divImage.height = '300'
+        divImage.width = '600'
+        divImage.height = '500'
 
-        let imgCaption = divImage.appendChild(document.createElement('p.card-text'))
-        imgCaption.innerHTML = post['caption']
+        // Adds a small div, houses Liking posts and adding Comments
+        let imgNav = divCard.appendChild(document.createElement('post.div'))
+        let imgOptions = imgNav.appendChild(document.createElement('post.ul'))
+        let optionList = imgOptions.appendChild(document.createElement('options.li'))
+
+
+        // Need to list each array element as its own evnet listening item
+        optionList.innerHTML = ['Heart', 'Comment', 'Send', 'Save']
+
+        // Block item that displays the total number of likes
+
+
+        // Creates a Div to store comments
+        let postCommentDiv = optionList.appendChild(document.createElement('comment.div'))
+
+            // The caption is the first displayed comment
+        postCommentDiv.innerHTML = post['caption']
+        
+
     })
 }
 
 
-
-
-    /*
-        //postBuilder()
-        cardFormat()
-        // Profile Div 
-        profileName.innerText = "Profile Name"
-
-        // Image Div
-        addImage.src = post['url']
-        addImage.alt = post['caption']
-        addImage.width = '600'
-        addImage.height = '500'
-
-        // Comments div
-
-        // Likes Div
-        newLikesDiv.innerText = `${post['likes']} likes`
-    })
-    
-} */
 
 function postBuilder() {
     // Post List items
@@ -108,5 +107,3 @@ function cardFormat() {
     imgCaption.innerHTML = post['caption']
 }
 
-
- ///Users/austinjohnson/Development/Projects/technically-ig/technically-ig-backend/assets/picture1.jpg
